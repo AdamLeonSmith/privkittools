@@ -17,7 +17,7 @@ with open('/home/adam/Desktop/1587822189712.json', encoding='utf-8-sig') as json
 tgt_location = {}
 tgt_location['latitude'] = 41.39808000
 tgt_location['longitude'] = 2.1582888
-tgt_time = datetime.fromtimestamp(1587808852000/1000)
+tgt_time = datetime.fromtimestamp(1587794451000/1000)
 start_time = tgt_time - timedelta(hours=4)
 end_time = tgt_time + timedelta(hours=4)
 print("Start of window: " + str(start_time))
