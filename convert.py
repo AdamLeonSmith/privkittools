@@ -2,8 +2,7 @@ import json
 from datetime import datetime, date
 import time
 
-
-with open('in.json', encoding='utf-8-sig') as json_file:
+with open('/home/adam/Desktop/Jan_ghist_2020_APRIL.json', encoding='utf-8-sig') as json_file:
     json_data = json.loads(json_file.read().replace('\n', ''))
     ret = []
     total = len(json_data['locations'])
@@ -27,7 +26,7 @@ with open('in.json', encoding='utf-8-sig') as json_file:
         out['latitude'] = float(punto['latitudeE7']) / 10000000
         out['longitude'] = float(punto['longitudeE7']) / 10000000
         ret.append(out)
-    f = open('privkit.json', 'w')
+    f = open('jan_long.json', 'w')
     f.write(json.dumps(ret))
     f.close()
 

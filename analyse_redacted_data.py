@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 import time
+from datetime import datetime, date, timedelta
 import json
 import numpy as np
 
-with open('/home/adam/Downloads/dean1-REDACTED.json', encoding='utf-8-sig') as json_file:
+with open('/home/adam/Desktop/1588339848460.json', encoding='utf-8-sig') as json_file:
   data = json.loads(json_file.read().replace('\n', ''))
 
 long = []
@@ -20,7 +21,7 @@ for pt in data:
   t = pt['time']
   if count > 1:
         diff = t - last_time
-        print("diff: " + str(diff))
+        print(str(datetime.fromtimestamp(pt['time']/1000)) + ", diff: " + str(diff))
         diffs.append(diff)
   last_time = t
 
